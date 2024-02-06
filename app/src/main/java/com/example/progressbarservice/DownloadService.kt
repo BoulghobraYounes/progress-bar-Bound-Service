@@ -22,9 +22,6 @@ class DownloadService: Service() {
         super.onCreate()
         sharedPreferences = getSharedPreferences("DownloadProgress", Context.MODE_PRIVATE)
         download = sharedPreferences.getInt("progress", 0)
-        if (download == 100) {
-            download = 0
-        }
     }
 
     override fun onBind(p0: Intent?): IBinder? {
